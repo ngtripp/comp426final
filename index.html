@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />    
+</head>
+
+<body>
+    <p><a href="tetris.html">TETRIS</a></p>
+    <p><a href="news.html">NEWS</a></p>
+    <p><a href="weather.html">WEATHER</a></p>
+    <button onclick="myFunction()">Toggle dark/light mode</button>
+            
+    <script>
+    function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    }
+
+    </script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <!-- Include links to CSS stylesheets below -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../ref_modules/@fortawesome/fontawesome-free/css/all.css">
+</head>
+
+<body>
+    <div id="login">
+        <div class="login-card">
+            <div class="card-title has-background-primary">
+                <h1>Login</h1>
+            </div>
+
+            <div class="content">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input id="userarea" class="input" placeholder="Username">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left">
+                        <input id="passwordarea" class="input" type="password" placeholder="Password">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <button id="loginButton" class="button is-success">Login</button>
+                    </p>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <p id="message"></p>
+                    </div>
+                </div>
+                <a href="signup.html">Don't have an account? Click here to sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include links to JavaScript files below -->
+    <script src="scripts2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tetris</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    
+</head>
+<body>
+    <p><a href="index.html">HOME</a></p>
+    <p><a href="tetris.html">TETRIS</a></p>
+    <p><a href="weather.html">WEATHER</a></p>
+
+    <button onclick="myFunction()">Toggle dark/light mode</button>
+        
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+  <form class="search" action="">
+    <h1>Search for the latest tetris news!</h1>
+    <label for="">News</laber>
+    <input class="input" type="text"/>
+    <input type="submit"/>
+  </form>
+
+  <div class = "container">
+    <ul class = "news-list"></ul>
+  </div>
+
+  <script>
+    const searchFrom = document.querySelector('.search');
+    const input = document.querySelector('.input');
+    const newsList = document.querySelector('.news-list');
+
+    searchFrom.addEventListener('submit', retrieve)
+    function retrieve(e){
+      e.preventDefault()
+      const apiKey = '0a95d4f24aee4b4e9051a3d5f49429de'
+      let topic = input.value;
+      
+      url = `https://newsapi.org/v2/everything?q=${topic}&apiKey=${apiKey}`
+      
+      fetch(url).then((res)=>{
+        return res.json()
+      }).then((data)=>{
+        console.log(data)
+        data.articles.forEach(article =>{
+          let li = document.createElement('li');
+          let a = document.createElement('a');
+          a.setAttribute('href', article.url);
+          a.setAttribute('target', '_blank')
+          a.textContent = article.title;
+          li.appendChild(a);
+          newsList.appendChild(li);
+        })
+      })
+
+      console.log(topic);
+    }
+
+  </script>
+</body>
+</html>

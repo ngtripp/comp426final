@@ -1,0 +1,21 @@
+
+body {
+    background-color: white;
+    color: black;
+}
+.dark-mode {
+    background-color: black;
+    color: brown;
+  }
+
+#score    { color: pink; font-weight: bold; vertical-align: middle; }
+#rows     { color: greenyellow; font-weight: bold; vertical-align: middle; }
+#tetris   { margin: 1em auto; padding: 1em; border: 10px solid black; border-radius: 10px; background-color: grey; }
+#stats    { display: inline-block; vertical-align: top; }
+#canvas   { display: inline-block; vertical-align: top; box-shadow: 20px 20px 20px #999; border: 2px solid #333; }
+#menu     { display: inline-block; vertical-align: top; position: relative; }
+#menu p   { margin: 0.5em 0; text-align: center; }
+#menu p a { text-decoration: none; color: black; }
+#upcoming { display: block; margin: 0 auto; background-color: #E0E0E0; }
+
+#stats    { position: absolute; bottom: 0em; right: 1em; }

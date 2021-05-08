@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather app</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    
+</head>
+
+<body>
+        <p><a href="index.html">HOME</a></p>
+        <p><a href="tetris.html">TETRIS</a></p>
+        <p><a href="news.html">NEWS</a></p>
+        <button onclick="myFunction()">Toggle dark/light mode</button>
+        <p>Enable your location and see if it's good tetris weather!</p>
+        <script>
+                function myFunction() {
+                   var element = document.body;
+                   element.classList.toggle("dark-mode");
+                }
+                </script>
+    <div class="container">
+        <img src="" alt="" srcset="" id="weather-icon">
+        <div id="location">Unable to Fetch Weather</div>
+        <div class="desc">No Information Available.</div>
+        <div class="weather">
+            <div class="c">Error</div>
+            <div class="circle"></div>
+            <div class="f">Error</div>
+        </div>
+        <div class="info">
+            <h4>Sunrise: <span class="sunrise">No Information Available</span></h4>
+            <h4>Sunset: <span class="sunset">No Information Available</span></h4>
+        </div>
+        <p>Good tetris weather!!!!!</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
